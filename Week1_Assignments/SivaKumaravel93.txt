@@ -1,0 +1,176 @@
+================================================================================
+
+# CODE REVIEW REPORT
+
+================================================================================
+
+**Repository:** PlayWright_TestLeaf-main
+**Reviewer:** Sanjeev
+
+================================================================================
+FILE 1: Week1_Assignments/checkNumber.js
+========================================
+
+**Code Working Status: Works as expected**
+
+**NAMING CONVENTION: PASSED**
+Function name `checkNumber` and parameter `number` are clear and meaningful.
+
+**COMMENTS: FAILED**
+No comments are provided to explain the purpose of the function or the positive, negative, and neutral conditions.
+
+**FORMATTING: PASSED**
+Code is properly indented and easy to read.
+
+**FUNCTIONALITY: PASSED**
+The function correctly identifies positive, negative, and zero values. The current input `0` correctly produces the neutral result.
+
+**BEST PRACTICES: PARTIALLY ADDRESSED**
+
+* Use `const` instead of `let` for `number` since its value is not reassigned.
+* Prefer returning the result from the function instead of directly printing it if the function is intended for reuse.
+* Add a semicolon after `checkNumber(number)` for consistency.
+
+**STRENGTHS:**
+
+1. Correct use of `if...else if...else`.
+2. Handles all three number conditions.
+3. Good function naming.
+4. Simple and readable implementation.
+
+================================================================================
+FILE 2: Week1_Assignments/gradeCalculations.js
+==============================================
+
+**Code Working Status: Partially Works**
+
+**NAMING CONVENTION: PASSED**
+Function name `getGrade` and parameter `score` clearly describe their purpose.
+
+**COMMENTS: FAILED**
+No comments explain the grading ranges or the use of `switch(true)`.
+
+**FORMATTING: PASSED**
+Code is clean and consistently formatted.
+
+**FUNCTIONALITY: FAILED**
+The grading conditions do not correctly cover the expected boundary values.
+
+For example:
+
+* A score of `90` receives **B**, because the condition is `score > 90`.
+* A score of `75` receives **C**, because the condition is `score > 75`.
+* A score of `60` receives **D**.
+* A score of `50` receives **E**.
+* A score of `35` receives **U**.
+
+If the intended ranges include the boundary values, use `>=` appropriately.
+
+**BEST PRACTICES: PARTIALLY ADDRESSED**
+
+* `switch(true)` works, but `if...else if...else` is generally clearer for range-based conditions.
+* Consider returning the grade rather than directly logging it.
+* Use `const` for `score` since it is not reassigned.
+
+**STRENGTHS:**
+
+1. Correct attempt at implementing grade calculation.
+2. Uses `switch` effectively for conditional branching.
+3. Function is reusable.
+4. Code structure is easy to understand.
+
+================================================================================
+FILE 3: Week1_Assignments/learnifelseSwitch.js
+==============================================
+
+**Code Working Status: Works as expected**
+
+**NAMING CONVENTION: PASSED**
+Function names `launchBrowser` and `runTests` are descriptive and clearly communicate their purpose.
+
+**COMMENTS: FAILED**
+No comments explain the purpose of the `if...else` and `switch` implementations.
+
+**FORMATTING: PASSED**
+Code is clean, properly indented, and readable.
+
+**FUNCTIONALITY: PASSED**
+Both functions work correctly:
+
+* `launchBrowser()` handles Chrome, Edge, Firefox, and unsupported browsers.
+* `runTests()` handles functional, sanity, regression, and the default smoke testing case.
+
+**BEST PRACTICES: PASSED**
+Strict equality (`===`) is correctly used for browser comparison, and the switch cases use string literals appropriately.
+
+**STRENGTHS:**
+
+1. Correct `if...else if...else` implementation.
+2. Correct `switch` implementation.
+3. Good function naming.
+4. Handles default scenarios properly.
+
+================================================================================
+FILE 4: Week1_Assignments/oddorEven.js
+======================================
+
+**Code Working Status: Works as expected**
+
+**NAMING CONVENTION: PASSED**
+Function name `isOddOrEven` and parameter `number` are meaningful and appropriate.
+
+**COMMENTS: FAILED**
+No comments explain the modulo operation or the odd/even logic.
+
+**FORMATTING: PASSED**
+Proper indentation and spacing throughout the file.
+
+**FUNCTIONALITY: PASSED**
+Correctly identifies whether the given number is odd or even using the modulo operator.
+
+**BEST PRACTICES: PARTIALLY ADDRESSED**
+
+* Use `const` instead of `let` for `number`.
+* Consider returning `"Even"` or `"Odd"` instead of directly logging the result.
+
+**STRENGTHS:**
+
+1. Simple and correct implementation.
+2. Correct use of the modulo operator.
+3. Clear function name.
+4. Proper `if...else` structure.
+
+================================================================================
+FILE 5: Week1_Assignments/varLetConst.js
+========================================
+
+**Code Working Status: Works as expected**
+
+**NAMING CONVENTION: PASSED**
+Function name `getBrowserName`, parameter `browser`, and variable `browserName` are meaningful.
+
+**COMMENTS: FAILED**
+No comments explain the purpose of the function or the variable declaration concept being demonstrated.
+
+**FORMATTING: PASSED**
+The code is properly formatted and readable.
+
+**FUNCTIONALITY: PASSED**
+The function correctly checks the browser name and prints the appropriate message.
+
+**BEST PRACTICES: PARTIALLY ADDRESSED**
+
+* Use strict equality (`===`) instead of `==`.
+* The file name suggests that `var`, `let`, and `const` are being demonstrated, but the code only demonstrates `const`. The assignment should include examples of all three declarations if that is the intended objective.
+* Consider returning the message instead of directly logging it.
+
+**STRENGTHS:**
+
+1. Good function naming.
+2. Correct browser validation logic.
+3. Uses `const` appropriately for `browserName`.
+4. Simple and readable code.
+
+================================================================================
+
+Try to complete all the home assignments and push the code to the repository, so that we can review the code and give you feedback on it. This will help you to improve your coding skills and also help us to understand your coding style and approach.
