@@ -1,0 +1,12 @@
+function sumofAll(n){
+    let sum = 0;
+    for(let i=1 ; i<=n; i++){
+            sum = sum+i;
+            console.log(`i value : ${i} and current sum value : ${sum}`);
+            
+    }
+    return sum;
+}
+
+const number = 5;
+console.log(sumofAll(number));
